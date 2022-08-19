@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+var listNumberEmp = [String]()
 struct ContentView: View {
     let number = ["one", "two", "three", "four"]
     var body: some View {
@@ -25,15 +25,19 @@ struct ContentView: View {
 
 struct detailView: View {
     let showNumber: String
-    var listNumberEmp = [String]()
-    func addArray() {
-        listNumberEmp.append(self.showNumber)
-    }
-    
+    //var listNumberEmp = [String]()
+    mutating func addArray(values: String) {
+        listNumberEmp.append(values) }
+    //below this line is error call function it's error
+    //addArray(value: "one")
     var body: some View {
         
-    
-        Text(showNumber)
+        VStack {
+            List(listNumberEmp, id: \.self) { value in
+        
+        Text(value)
+            }
+        }
     }
 }
 
