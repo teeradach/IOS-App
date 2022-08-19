@@ -26,10 +26,13 @@ struct ContentView: View {
 struct detailView: View {
     let showNumber: String
     var listNumberEmp = [String]()
-
+    func addArray() {
+        listNumberEmp.append(self.showNumber)
+    }
+    
     var body: some View {
         
-    listNumberEmp.append(showNumber)
+    
         Text(showNumber)
     }
 }
