@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-var listNumberEmp = [String]()
+//var listNumberEmp = [String]()
 struct ContentView: View {
     let number = ["one", "two", "three", "four"]
     var body: some View {
@@ -25,11 +25,12 @@ struct ContentView: View {
 
 struct detailView: View {
     let showNumber: String
-    //var listNumberEmp = [String]()
+    var listNumberEmp = [String]()
     mutating func addArray(values: String) {
-        listNumberEmp.append(values) }
-    //below this line is error call function it's error
-    //addArray(value: "one")
+        listNumberEmp.append(values)
+        
+    }
+    
     var body: some View {
         
         VStack {
@@ -41,8 +42,7 @@ struct detailView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+
+//var dv = detailView(listNumberEmp: ["one"])
+//dv.addArray(Values: "one")
+
