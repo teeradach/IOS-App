@@ -28,7 +28,6 @@ struct detailView: View {
     var listNumberEmp = [String]()
     mutating func addArray(values: String) {
         listNumberEmp.append(values)
-        
     }
     
     var body: some View {
@@ -45,4 +44,6 @@ struct detailView: View {
 
 //var dv = detailView(listNumberEmp: ["one"])
 //dv.addArray(Values: "one")
+
+//test edit 
 
