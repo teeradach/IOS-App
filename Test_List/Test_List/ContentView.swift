@@ -44,6 +44,3 @@ struct detailView: View {
 
 //var dv = detailView(listNumberEmp: ["one"])
 //dv.addArray(Values: "one")
-
-//test edit 
-
