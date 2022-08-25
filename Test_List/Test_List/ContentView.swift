@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-//var listNumberEmp = [String]()
+var listNumberEmp = [String]()
 struct ContentView: View {
     let number = ["one", "two", "three", "four"]
     var body: some View {
@@ -26,9 +26,10 @@ struct ContentView: View {
 struct detailView: View {
     let showNumber: String
     var listNumberEmp = [String]()
-    mutating func addArray(values: String) {
-        listNumberEmp.append(values)
-    }
+    
+    
+    
+    AddToList.addArray("one")
     
     var body: some View {
         
@@ -41,6 +42,10 @@ struct detailView: View {
     }
 }
 
+struct AddToList {
+    mutating func addArray(value: String) {
+        listNumberEmp.append(value)
+    }
+}
 
-//var dv = detailView(listNumberEmp: ["one"])
-//dv.addArray(Values: "one")
+
