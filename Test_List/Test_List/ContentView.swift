@@ -29,7 +29,7 @@ struct detailView: View {
     
     
     
-    //AddToList.addArray("one")
+    AddToList.addArray("one")
     
     var body: some View {
         
