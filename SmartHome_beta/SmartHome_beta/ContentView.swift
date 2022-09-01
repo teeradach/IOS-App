@@ -11,6 +11,8 @@ struct ContentView: View {
     
     @State var detailShow: Bool = false
     @Binding var deviceShow: [String]
+    //@State var deviceShow: [String] = []
+    //@Binding var deviceShow: [String]
     
     var body: some View {
         if !detailShow {
@@ -25,13 +27,13 @@ struct ContentView: View {
                 }
             }
             }
-        detailView(detailShow: $detailShow, deviceShow: $deviceShow)
+        detailView(detailShow:$detailShow)
         }
 }
 
 struct detailView: View {
     @State var deviceShow: [String] = []
-    
+    //@Binding var deviceShow: [String]
     @Binding var detailShow: Bool
     let deviceList = ["Device1", "Device2", "Device 3"]
     var body: some View {
@@ -45,9 +47,9 @@ Text("SmartHome Page 2")
                 })
             }
             Button("Back") {
-                //self.detailShow.toggle()
+                self.detailShow.toggle()
             }
         }
-        //contentView(deviceShow: $deviceShow)
+        ContentView(deviceShow: $deviceShow)
     }
 }
