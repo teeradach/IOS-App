@@ -10,9 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     @State var detailShow: Bool = false
-    @Binding var deviceShow: [String]
-    //@State var deviceShow: [String] = []
-    //@Binding var deviceShow: [String]
+    @State var deviceShow: [String] = []
+    
     
     var body: some View {
         if !detailShow {
@@ -27,14 +26,15 @@ struct ContentView: View {
                 }
             }
             }
-        detailView(detailShow:$detailShow)
+        detailView(detailShow:$detailShow, deviceShow: $deviceShow)
         }
 }
 
 struct detailView: View {
-    @State var deviceShow: [String] = []
-    //@Binding var deviceShow: [String]
+    
+    
     @Binding var detailShow: Bool
+    @Binding var deviceShow: [String]
     let deviceList = ["Device1", "Device2", "Device 3"]
     var body: some View {
         if detailShow {
@@ -50,6 +50,6 @@ Text("SmartHome Page 2")
                 self.detailShow.toggle()
             }
         }
-        ContentView(deviceShow: $deviceShow)
+        
     }
 }
