@@ -21,6 +21,9 @@ struct ContentView: View {
                 Button("Add Device", action :{
                     self.detailShow.toggle()
                 })
+                Button("Remove", action : {
+                    deviceShow.remove(at: 0)
+                })
                 List(deviceShow, id: \.self) { device in
                     Text(device)
                 }
