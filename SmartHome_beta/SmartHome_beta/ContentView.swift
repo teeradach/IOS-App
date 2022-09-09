@@ -21,14 +21,22 @@ struct ContentView: View {
                 Button("Add Device", action :{
                     self.detailShow.toggle()
                 })
-                Button("Remove", action : {
-                    deviceShow.remove(at: 0)
-                })
-                List(deviceShow, id: \.self) { device in
-                    Text(device)
+                
+//                List(deviceShow, id: \.self) { device in
+//                    Text(device)
+//                    Button("Remove", action : {
+//                        deviceShow.remove(at: 0)
+//                    })
+//                }
+                
+                List(deviceShow.enumerated().map({ $0 }), id: \.0.self) {idx, item in
+                    Text("\(idx) - \(item)")
+                    Button("Remove", action : {
+                        deviceShow.remove(at: idx)
+                    })
                 }
             }
-            }
+        }
         detailView(detailShow:$detailShow, deviceShow: $deviceShow)
         }
 }
