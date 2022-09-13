@@ -14,6 +14,7 @@
 		A0DD5D4F28BC877700FE701D /* SmartHome_betaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD5D4E28BC877700FE701D /* SmartHome_betaTests.swift */; };
 		A0DD5D5928BC877700FE701D /* SmartHome_betaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD5D5828BC877700FE701D /* SmartHome_betaUITests.swift */; };
 		A0DD5D5B28BC877700FE701D /* SmartHome_betaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD5D5A28BC877700FE701D /* SmartHome_betaUITestsLaunchTests.swift */; };
+		BB37E06328D0F7BA0091599A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB37E06228D0F7BA0091599A /* User.swift */; };
 		BB69C5D628C9FD2200052B06 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69C5D528C9FD2200052B06 /* Network.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		A0DD5D5428BC877700FE701D /* SmartHome_betaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHome_betaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0DD5D5828BC877700FE701D /* SmartHome_betaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHome_betaUITests.swift; sourceTree = "<group>"; };
 		A0DD5D5A28BC877700FE701D /* SmartHome_betaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHome_betaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BB37E06228D0F7BA0091599A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BB69C5D528C9FD2200052B06 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 				A0DD5D3F28BC877500FE701D /* ContentView.swift */,
 				A0DD5D4128BC877700FE701D /* Assets.xcassets */,
 				A0DD5D4328BC877700FE701D /* Preview Content */,
+				BB37E06228D0F7BA0091599A /* User.swift */,
 			);
 			path = SmartHome_beta;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB37E06328D0F7BA0091599A /* User.swift in Sources */,
 				A0DD5D4028BC877500FE701D /* ContentView.swift in Sources */,
 				A0DD5D3E28BC877500FE701D /* SmartHome_betaApp.swift in Sources */,
 				BB69C5D628C9FD2200052B06 /* Network.swift in Sources */,

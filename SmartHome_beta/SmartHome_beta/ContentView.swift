@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @EnvironmentObject var network: Network
     @State var detailShow: Bool = false
     @State var deviceShow: [String] = []
     
@@ -20,14 +20,12 @@ struct ContentView: View {
             .padding()
                 Button("Add Device", action :{
                     self.detailShow.toggle()
+                    network.getUsers()
                 })
                 
-//                List(deviceShow, id: \.self) { device in
-//                    Text(device)
-//                    Button("Remove", action : {
-//                        deviceShow.remove(at: 0)
-//                    })
-//                }
+                List(network.users, id: \.self) { user in
+                    Text(user.name)
+                }
                 
                 List(deviceShow.enumerated().map({ $0 }), id: \.0.self) {idx, item in
                     Text("\(idx) - \(item)")
@@ -62,5 +60,13 @@ Text("SmartHome Page 2")
             }
         }
         
+    }
+    
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+            .environmentObject(Network())
     }
 }
