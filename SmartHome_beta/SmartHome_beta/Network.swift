@@ -6,7 +6,7 @@
 //
 
 
-//option - URLSession.shared.dataTask, sync/await, combine
+//option - URLSession.shared.dataTask, async/await, combine
 import Foundation
 class Network: ObservableObject {
     @Published var users: [User] = []
@@ -39,6 +39,8 @@ class Network: ObservableObject {
         dataTask.resume()
     }
     
-    func callHTTPPOST() { //exercise }
+    func callHTTPPOST() { //exercise
+        
+    }
     
 }
