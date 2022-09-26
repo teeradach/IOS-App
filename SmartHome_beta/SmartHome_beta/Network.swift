@@ -10,11 +10,14 @@
 import Foundation
 class Network: ObservableObject {
     @Published var users: [User] = []
-    func getUsers() { //sample of HTTP get network caller
+    func getUsers() { 
+        // sample of HTTP get network caller
+        // start - Create URL request
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { fatalError("Missing URL") }
 
         let urlRequest = URLRequest(url: url)
-
+        // end - Create URL request
+        // start - create request promise
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             if let error = error {
                 print("Request error: ", error)
@@ -35,10 +38,16 @@ class Network: ObservableObject {
                 }
             }
         }
+        // end - create promise
 
+        // Execute promise
         dataTask.resume()
     }
     
+    // TODO: Add steps by steps comments
+    // TODO: Add comment for function that takes function?
+    // TODO: Create examples for High Order Function (HOC) JS equivalent const sth = ()=> console.log('hello') ?
+
     func callHTTPPOST() { //exercise
         
     }
