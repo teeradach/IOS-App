@@ -12,9 +12,10 @@ class Network: ObservableObject {
     @Published var users: [User] = []
     func getUsers() { 
         // sample of HTTP get network caller
-        // start - Create URL request
+        // start - Create URL request by inputing the url string since URL(string:) method return optional URL then we use guard let to detect the null that might return. So if URL(String:) return null then fall to else block which is  return getUsers() with fatalError("Missing URL"). Otherwise, continue to the next line in getUsers()
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { fatalError("Missing URL") }
 
+        // create URLRequest by url from previous step since URLRequest(url:) return non-optional URLRequest so we no need to perform if let or gaurd let we rather just assign the URLRequest(url: url) resule directly to immutable varaible or let variable
         let urlRequest = URLRequest(url: url)
         // end - Create URL request
         // start - create request promise
